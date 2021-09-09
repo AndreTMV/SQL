@@ -1,0 +1,38 @@
+Pop Quiz answers
+moxie -> SELECT drink FROM `states` WHERE state = "Maine";
+SELECT state FROM `states` WHERE drink = "Milk";
+19 -> SELECT COUNT(state) FROM `states` WHERE drink = "Milk";
+Ohio Tomato Juice 1965 -> SELECT * FROM `states` ORDER BY year ASC LIMIT 1;
+
+SQL Datatypes 
+Here are some of the more common datatypes that you'll be using in your database whether it's MYSQL, SQL Server, or Oracle. 
+
+TINYINT(Size)
+A very small integer. Signed range is from -128 to 127. Unsigned range is from 0 to 255. "Size" specifies the maximum display width (which is 255)
+
+INT(Size)
+A medium integer. Signed range is from -2147483648 to 2147483647. Unsigned range is from 0 to 4294967295. "Size" specifies the maximum display width (which is 255).
+
+BIGINT(Size)
+A large integer. Signed range is from -9223372036854775808 to 9223372036854775807. Unsigned range is from 0 to 1844674407370955
+
+VARCHAR(256)
+A VARIABLE length string that can contain letters, numbers, and special characters. The length can be from 0 to 65535
+
+LONGTEXT
+A string with up to 4,294,967,295 characters
+
+DECIMAL(size, d)
+"Size" is the total number of digitals. "d" is the number of digits after the decimal point. The maximum number for size is 65. The maximum number for d is 30. The default value for size is 10. The default value for d is 0. For money, a suitable recommendation is to use DECIMAL(10, 2)
+
+DATETIME
+Used to set the date, Google instructions for more info on this!
+
+TIMESTAMP
+The current timestamp (in UNIX time) when the row was created.
+
+Excercise two
+SELECT users.user_nicename AS "Customer Name", products.book_name AS "Book Name" FROM purchases JOIN users ON users.ID = purchases.user_id JOIN products ON products.ID = purchases.product_id;
+
+
+What’s the difference between TRUNCATE and DROP? In this video, I’m going to demonstrate when to use TRUNCATE and when to use DROP. Truncate will delete all the rows of any given table (but the table will still exist). DROP deletes all the rows of data, and the table will also be deleted. Let me show you how to use these SQL statements.  
